@@ -14,13 +14,13 @@ public class probleme3 {
 		int NOL = sc.nextInt();
 		
 		
-		int[] numberOfSymbols = new int[NOL];
+		int[] NOS = new int[NOL];
 		String[] symbolType = new String[NOL];
 		
 		
 		for (int i = 0; i < NOL; i++) 
 		{		
-			numberOfSymbols[i] = sc.nextInt();
+			NOS[i] = sc.nextInt();
 			symbolType[i] = sc.nextLine();
 			symbolType[i] = symbolType[i].strip();			
 		}
@@ -29,7 +29,7 @@ public class probleme3 {
 		
 		for (int i = 0; i < NOL; i++) 
 		{		
-			for (int j = 0; j < numberOfSymbols[i]; j++) 
+			for (int j = 0; j < NOS[i]; j++) 
 			{
 				System.out.print(symbolType[i]);
 			}
