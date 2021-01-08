@@ -9,35 +9,38 @@ public class probleme5
 				public static void main(String[] args)
 					{
 				        Scanner sc = new Scanner(System.in);
-				        int N = Integer.parseInt(sc.nextLine());
+				        int NofL = Integer.parseInt(sc.nextLine());
 				        
 				        
-				        for (int i = 0; i < N; i++)
+				        for (int i = 0; i < NofL; i++)
 				        {
 				            StringBuilder output = new StringBuilder();
 				            String line = sc.nextLine();
-				            String current = String.valueOf(line.charAt(0));
-				            int count = 0;
+				            String presentValue = String.valueOf(line.charAt(0));
+				            int cpt = 0;
+				            
 				            for (int x = 0; x < line.length(); x++)
 				            {
 				                String character = String.valueOf(line.charAt(x));
-				                if (character.equals(current)){
-				                    count++;
+				                if (character.equals(presentValue))
+				                {
+				                    cpt++;
 				                    continue;
 				                }
 				                
-				                output.append(count);
+				                output.append(presentValue);
 				                output.append(" ");
-				                output.append(current);
+				                output.append(presentValue);
 				                output.append(" ");
+				             
+				                cpt = 1;
+				                presentValue = character;
 				                
-				                
-				                count = 1;
-				                current = character;
 				            }
-				            output.append(count);
+				            
+				            output.append(cpt);
 				            output.append(" ");
-				            output.append(current);
+				            output.append(presentValue);
 				            System.out.println(output.toString());
 				        }
 				    }
